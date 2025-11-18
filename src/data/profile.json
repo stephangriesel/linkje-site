@@ -1,0 +1,15 @@
+{
+  "name": "Stephan Griesel",
+  "bio": "Your awesome bio description goes here.",
+  "imageUrl": "/profile-pic.png",
+  "links": [
+    {
+      "title": "Website",
+      "url": "https://www.stephangriesel.com"
+    },
+    {
+      "title": "Discogs",
+      "url": "https://www.discogs.com/user/stephangriesel"
+    }
+  ]
+}
