@@ -1,27 +1,27 @@
-# This backend uses Netlify Identity and Git Gateway
-# This is the easiest way to get started.
 backend:
   name: git-gateway
   branch: main # Or whatever your default branch is
 
-# This line is optional, but useful for media uploads
 media_folder: "public/images" # Where to store new images
 public_folder: "/images" # The public URL for images
 
-# This defines your content "collections"
 collections:
-  # This is a "file" collection, since we edit ONE file
-  - name: "profile"
+  - name: "profile_settings"
     label: "Profile Settings"
-    file: "src/data/profile.json" # Path to the JSON file
-    fields: # The fields in that JSON file
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Bio", name: "bio", widget: "string" }
-      - { label: "Profile Image", name: "imageUrl", widget: "image" }
-      # This is the "list" widget for your links
-      - name: "links"
-        label: "Links"
-        widget: "list"
-        fields: # The fields for EACH item in the list
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "URL", name: "url", widget: "string" }
+    
+    files: 
+      - file: "src/data/profile.json" # The actual file path
+        label: "Linktree Profile Data"
+        name: "linktree_data"
+        
+        fields: 
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Bio", name: "bio", widget: "string" }
+          - { label: "Profile Image", name: "imageUrl", widget: "image" }
+          
+          - name: "links"
+            label: "Links"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
