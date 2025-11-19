@@ -1,6 +1,7 @@
 ---
 import data from '../data/profile.json';
 const { name, bio, imageUrl, links } = data;
+import '../styles/global.css';
 ---
 <html lang="en">
 <head>
@@ -9,7 +10,6 @@ const { name, bio, imageUrl, links } = data;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Links</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
 </head>
 <body>
     <main class="container">
