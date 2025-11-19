@@ -8,8 +8,7 @@ const { name, bio, imageUrl, links } = data;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{name}'s Links</title>
-
+    <title>Links</title>
     <link rel="stylesheet" href="/src/styles/global.css" />
 </head>
 <body>
@@ -17,11 +16,9 @@ const { name, bio, imageUrl, links } = data;
         <header class="profile-header">
             <img 
                 src={imageUrl} 
-                alt="Profile picture for {name}" 
+                alt="Profile picture" 
                 class="profile-image"
             />
-            <h1 class="profile-name">{name}</h1>
-            <p class="profile-bio">{bio}</p>
         </header>
 
         <section class="links-container">
